@@ -39,6 +39,10 @@ public class ReflectionFactory {
         return new ClassReference(javaClass);
     }
 
+    public String renderLambdaToString(Lambda lambda) {
+        return lambda.getClass().getGenericInterfaces()[0].toString();
+    }
+
     // Functions
 
     public KFunction function(FunctionReference f) {

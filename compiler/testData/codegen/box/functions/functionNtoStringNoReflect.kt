@@ -1,3 +1,5 @@
+// NO_KOTLIN_REFLECT
+
 fun check(expected: String, obj: Any?) {
     val actual = obj.toString()
     if (actual != expected)
