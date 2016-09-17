@@ -740,7 +740,7 @@ fun aggregates(): List<GenericFunction> {
         body(Sequences) {
             """
             return map {
-                f(it)
+                action(it)
                 it
             }
             """
