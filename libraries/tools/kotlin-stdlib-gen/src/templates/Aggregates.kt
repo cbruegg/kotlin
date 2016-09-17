@@ -731,8 +731,10 @@ fun aggregates(): List<GenericFunction> {
         }
         include(Maps, CharSequences)
 
-        typeParam(Generics) { "I: Iterable<T>" }
-        returns(Generics) { "I" }
+        typeParam(Generic) { "I: Iterable<E>" }
+        typeParam(Generic) { "E" }
+        customReceiver(Generic) { "I" }
+        returns(Generic) { "I" }
 
         doc(Sequences) { f -> "Applies the supplied [action] on each ${f.element} of the Sequence as they pass through it." }
         inline(false, Sequences)
