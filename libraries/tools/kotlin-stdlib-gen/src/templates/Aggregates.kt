@@ -731,6 +731,7 @@ fun aggregates(): List<GenericFunction> {
         }
         include(Maps, CharSequences)
 
+        exclude(Iterables)
         typeParam(Generic) { "I: Iterable<E>" }
         typeParam(Generic) { "E" }
         customReceiver(Generic) { "I" }
